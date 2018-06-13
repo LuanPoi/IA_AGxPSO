@@ -1,3 +1,5 @@
+#Upar pro git -> git push --mirror https://github.com/LuanPoi/IA_AGxPSO.git
+
 #Definição de variáveis
 grafo <- rbind(c(0, 20, -1, -1, -1, -1, -1, 29, -1, -1, -1, 29, 37, -1, -1, -1, -1, -1),
                c(20, 0, 25, -1, -1, -1, -1, 28, -1, -1, -1, 39, -1, -1, -1, -1, -1, -1),
