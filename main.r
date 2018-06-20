@@ -4,7 +4,8 @@ library(igraph)
 library(rgl)
 
 #Definição de variáveis
-matrizDeAdjacencia <- as.matrix(rbind(c(0, 20, 0, 0, 0, 0, 0, 29, 0, 0, 0, 29, 37, 0, 0, 0, 0, 0),
+matrizDeAdjacencia <- as.matrix(rbind(
+               c(0, 20, 0, 0, 0, 0, 0, 29, 0, 0, 0, 29, 37, 0, 0, 0, 0, 0),
                c(20, 0, 25, 0, 0, 0, 0, 28, 0, 0, 0, 39, 0, 0, 0, 0, 0, 0),
                c(0, 25, 0, 24, 0, 0, 0, 30, 0, 0, 0, 0, 54, 0, 0, 0, 0, 0),
                c(0, 0, 25, 0, 39, 32, 42, 0, 23, 33, 0, 0, 0, 56, 0, 0, 0, 0),
@@ -23,10 +24,12 @@ matrizDeAdjacencia <- as.matrix(rbind(c(0, 20, 0, 0, 0, 0, 0, 29, 0, 0, 0, 29, 3
                c(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 17, 18, 26, 0, 15),
                c(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 36, 0, 0, 0, 21, 0, 15, 0)))
 
-grafo <- graph_from_adjacency_matrix(matrizDeAdjacencia, mode = "undirected", weighted = TRUE)
-tkplot(grafo, edge.label=round(E(grafo)$weight, 3))
+Matrizgrafo <- graph_from_adjacency_matrix(matrizDeAdjacencia, mode = "undirected", weighted = TRUE)
+tkplot(Matrizgrafo)
 
-edge_attr(grafo)
-#random_walk(grafo, 1, 18)
-#rglplot(grafo)
+
+
+#gorder(grafo) #retorna o tamanho do grafo.
+#degree(grafo) #retorna uma lista com o numero de adjacencias de cada vertice.
+#adjacent_vertices(grafo, 1) #retorna uma lista ordenada com os vertices adjacentes ao passado.
 
